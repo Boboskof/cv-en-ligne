@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
-    <title>CV GB Août 2022</title>
+    <title>CV bobo 2025</title>
 </head>
 <body cz-shortcut-listen="true">
-    <div class="bgimg-1">
-            <nav class="navbar navbar-expand-xxl header">
-                <div class="container-fluid">
+    <!-- Animation de chargement -->
+    <div class="loading-animation" id="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="bgimg-1 ">
+<!-- <nav class="navbar navbar-expand-xxl header"> -->
+                <!-- <div class="container-fluid">
                     <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <strong class="navbar-toggler-icon"></strong>
                     </button>
@@ -25,31 +32,51 @@
                                 <a class="nav-link text-center" aria-current="page" href="#part1">ma formation</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-center" aria-current="page" href="#part2">expérience professionnelle</a>
+                                <a class="nav-link text-center link-opacity-50-hover" aria-current="page" href="#part2">expérience professionnelle</a>
                             </li>
                             <li class="nav-item ms-5">
-                                <a class="nav-link text-center" aria-current="page" href="#part3">autres expériences</a>
+                                <a class="nav-link text-center link-opacity-50-hover" aria-current="page" href="#part3">autres expériences</a>
                             </li>
                             <li class="nav-item ms-5">
-                                <a class="nav-link text-center" aria-current="page" href="#part4">compétences</a>
+                                <a class="nav-link text-center link-opacity-50-hover" aria-current="page" href="#part4">compétences</a>
                             </li>
                             <li class="nav-item ms-5">
-                                <a class="nav-link text-center" aria-current="page" href="lien vers le pdf" target="_blank">CV en pdf</a>
+                                <a class="nav-link text-center link-opacity-50-hover" aria-current="page" href="lien vers le pdf" target="_blank">CV en pdf</a>
                             </li>
-                        </ul>
-                        <div class="text-end">
-                            <a href="" onClick="javascript:document.location.reload(true)">Changer les images</a>
-                        </div>
+                        </ul>            
                     </div>
                 </div>
-            </nav>
-        <h1 class="caption">
-            <strong class="titre">Bienvenue sur mon CV en ligne</strong>
-        </h1>
+            </nav> -->
+            <h1 id="main-title" class="caption">
+                <strong class="titre-typing">Bienvenue sur mon CV en ligne</strong>
+              </h1>
+              
+              <!-- Gros ronds -->
+              <div id="menu-ronds">
+                <a href="#part1" class="circle-link">Ma&nbsp;formation</a>
+                <a href="#projets" class="circle-link">Projets</a>
+                <a href="#part2" class="circle-link">Expérience</a>
+                <a href="#part3" class="circle-link">Autres</a>
+                <a href="#part4" class="circle-link">Compétences</a>
+                <a href="cv.pdf" target="_blank" class="circle-link">CV&nbsp;PDF</a>
+              </div>
+              
+              <!-- Petits ronds décoratifs -->
+              <div id="petits-ronds"></div>
+              
+              <!-- Conteneur des « circuits » -->
+              <svg id="circuits" width="100%" height="100%"></svg>
+              
+              
+              
+  
     </div>
-    <div class="experience color0">
-        <h1>NOM prénom</h1>
-        <h2>poste envisagé</h2>
+    <div class="experience color0 fade-in-section">
+        <h1>Pillard Borys</h1>
+        <h2>Développpeur Web</h2>
+        <p>En reconversion vers le développement web après plus de 15 ans dans des métiers de création et de rigueur (design culinaire, pâtisserie, charcuterie-traiteur), je mets aujourd'hui cette richesse d'expérience au service du code. Curieux, appliqué et passionné de design et d'interfaces web, je me forme activement aux technologies front-end (HTML, CSS, JS, React) et cherche à rejoindre une équipe tech qui valorise la précision, l'humain et l'esthétique.
+            <br>Mon parcours atypique est ma force : j'ai appris à travailler avec exigence, à respecter des délais serrés, à collaborer avec des clients, et à livrer des réalisations concrètes – comme dans un projet web.
+            <br>Actuellement en formation, je suis à la recherche d'un stage en développement web pour consolider mes compétences sur des projets réels, apprendre en équipe, et contribuer avec motivation et créativité.</p>
         <div class="d-flex flex-wrap justify-content-around mt-5">
             <div class="col-12 col-md-4 text-center">
                 <p>Esprit d'équipe</p>
@@ -59,7 +86,7 @@
             <div class="col-12 col-md-4 text-center">
                 <p>Organisé</p>
                 <p>Curieux</p>
-                <p>Patient</p>
+                <p>Créatif</p>
             </div>
         </div>
         <div class="d-flex flex-wrap justify-content-around mt-5">
@@ -77,80 +104,155 @@
         </h1>
     </div>
     <div class="main_part">
-        <div class="experience color1">
+        <div class="experience color1 fade-in-section">
             <ul>
                 <li class="mb-5">
-                    <h3><strong><a href="https://www.rennes-sb.fr/" target="_blank">ecole n°1</a></strong></h3>
-                    <h4><i>1996-1999</i></h4>
+                    <h3><strong>Développeur Web (en cours)</strong></h3>
+                    <h4><i>LADAPT Essonne, Evry — 2025</i></h4>
                     <ul>
-                        <li>diplome</li>
-                        <li>domaine</li>
-                    </ul><br>
-                    <p>cursus</p>
-                    <ul>
-                        <li>mettez</li>
-                        <li>ce que</li>
-                        <li>vous voulez</li>
+                        <li>HTML5, CSS3, JavaScript, PHP, MySQL</li>
+                        <li>WordPress, Symfony, Git, Webpack</li>
+                        <li>Tailwind CSS</li>
                     </ul>
                 </li>
                 <li class="mb-5">
-                    <h3><strong><a href="https://www.rennes-sb.fr/" target="_blank">ecole n°2</a></strong></h3>
-                    <h4><i>2015-2016</i></h4>
-                    <ul>
-                        <li>diplome</li>
-                        <li>domaine</li>
-                    </ul><br>
-                    <p>cursus</p>
-                    <ul>
-                        <li>mettez</li>
-                        <li>ce que</li>
-                        <li>vous voulez</li>
-                    </ul>
+                    <h3><strong>CAP Charcutier-Traiteur</strong></h3>
+                    <h4><i>ESCAM Bordeaux</i></h4>
+                </li>
+                <li class="mb-5">
+                    <h3><strong>CAP Pâtisserie</strong></h3>
+                    <h4><i>CRP La Passerelle Annecy</i></h4>
+                </li>
+                <li class="mb-5">
+                    <h3><strong>BEP & Bac Pro Cuisine</strong></h3>
+                    <h4><i>Lycée Albert de Mun, Paris</i></h4>
                 </li>
             </ul>
             <a class="inner-link" href="#">Revenir en haut</a>
         </div>
     </div>
+    
+    <!-- Nouvelle section Projets -->
+    <div id="projets" class="bgimg-projets">
+        <h1 class="caption">
+            <strong class="titre">Mes Projets</strong>
+        </h1>
+    </div>
+    <div class="main_part">
+        <div class="experience color-projets fade-in-section">
+            <div class="row">
+                <!-- Projet DreamDogs -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fa fa-dog"></i>
+                        </div>
+                        <h3><strong>DreamDogs</strong></h3>
+                        <h4><i>Plateforme Symfony pour éleveurs canins</i></h4>
+                        <p class="project-description">
+                            Application web avec rôles utilisateurs (CLIENT, ELEVEUR, ADMIN), gestion de chiens, 
+                            portées, réservations, messagerie, upload d'images, recherche avancée avec filtres 
+                            dynamiques, notifications email. Interface responsive moderne.
+                        </p>
+                        <div class="project-tech">
+                            <strong>Technologies :</strong> Symfony 7.3, PHP 8.2, Doctrine ORM, Twig, Tailwind CSS, Stimulus, MySQL
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn">
+                                <i class="fa fa-external-link"></i> Voir le projet
+                            </a>
+                            <a href="#" target="_blank" class="btn">
+                                <i class="fa fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet WordPress -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fa fa-wordpress"></i>
+                        </div>
+                        <h3><strong>L'Atelier des Délices</strong></h3>
+                        <h4><i>Site WordPress e-commerce</i></h4>
+                        <p class="project-description">
+                            Site e-commerce pour une entreprise artisanale de pâtisserie. Intégration d'une 
+                            charte graphique raffinée, galerie produits, navigation fluide, responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <strong>Technologies :</strong> WordPress, WooCommerce, CSS, Plugins
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn">
+                                <i class="fa fa-external-link"></i> Voir le projet
+                            </a>
+                            <a href="#" target="_blank" class="btn">
+                                <i class="fa fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet Bully Love -->
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fa fa-gamepad"></i>
+                        </div>
+                        <h3><strong>Bully Love (Fil Rouge 1)</strong></h3>
+                        <h4><i>Mini application front-end en JS</i></h4>
+                        <p class="project-description">
+                            Mini application front-end en JS : logique de jeu interactif, manipulation du DOM, 
+                            gestion des événements utilisateurs. Premier projet personnel.
+                        </p>
+                        <div class="project-tech">
+                            <strong>Technologies :</strong> HTML, CSS, JavaScript
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn">
+                                <i class="fa fa-external-link"></i> Voir le projet
+                            </a>
+                            <a href="#" target="_blank" class="btn">
+                                <i class="fa fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="inner-link" href="#">Revenir en haut</a>
+        </div>
+    </div>
+    
     <div id="part2" class="bgimg-3">
         <h1 class="caption">
             <strong class="titre">Mon expérience professionnelle</strong>
         </h1>
     </div>
     <div class="main_part">
-        <div class="experience color1">
-            <h3>date</h3>
+        <div class="experience color1 fade-in-section">
+            <h3>2023 - 2024</h3>
             <ul>
                 <li class="mb-5">
-                    <h3><strong>poste</strong></h3>
-                    <h4><i>entreprise</i></h4>
+                    <h3><strong>Styliste culinaire</strong></h3>
+                    <h4><i>P'référence Agence de Design, Paris</i></h4>
                     <ul>
-                        <li>définition</li>
-                        <li>du</li>
-                        <li>poste</li>
+                        <li>Participation à la création et mise en scène de recettes pour de grandes marques</li>
+                        <li>Collaboration avec des marques comme Système U, Amora, etc.</li>
+                        <li>Création de contenus visuels pour la communication marketing</li>
                     </ul><br>
                 </li>
             </ul>
-            <h3>date</h3>
+            <h3>2011 - 2023</h3>
             <ul>
                 <li class="mb-5">
-                    <h3><strong>poste</strong></h3>
-                    <h4><i>entreprise</i></h4>
+                    <h3><strong>Charcutier-Traiteur / Pâtissier</strong></h3>
+                    <h4><i>Divers postes - Bordeaux / Annecy / Paris</i></h4>
                     <ul>
-                        <li>définition</li>
-                        <li>du</li>
-                        <li>poste</li>
-                    </ul><br>
-                </li>
-            </ul>
-            <h3>date</h3>
-            <ul>
-                <li class="mb-5">
-                    <h3><strong>poste</strong></h3>
-                    <h4><i>entreprise</i></h4>
-                    <ul>
-                        <li>définition</li>
-                        <li>du</li>
-                        <li>poste</li>
+                        <li>Fabrication artisanale de produits de charcuterie et pâtisserie</li>
+                        <li>Gestion des cuissons et respect des normes d'hygiène</li>
+                        <li>Travail d'équipe et service client</li>
+                        <li>Gestion des stocks et planification de production</li>
                     </ul><br>
                 </li>
             </ul>
@@ -163,16 +265,27 @@
         </h1>
     </div>
     <div class="main_part">
-        <div class="experience color2">
-            <h3>date</h3>
+        <div class="experience color2 fade-in-section">
+            <h3>Soft Skills</h3>
             <ul>
                 <li class="mb-5">
-                    <h3><strong>poste</strong></h3>
-                    <h4><i>entreprise</i></h4>
+                    <h3><strong>Qualités personnelles</strong></h3>
                     <ul>
-                        <li>définition</li>
-                        <li>du</li>
-                        <li>poste</li>
+                        <li>Sens du détail et esthétique</li>
+                        <li>Organisation & autonomie</li>
+                        <li>Rigueur & adaptabilité</li>
+                        <li>Créativité culinaire et technique</li>
+                    </ul><br>
+                </li>
+            </ul>
+            <h3>Centres d'intérêt</h3>
+            <ul>
+                <li class="mb-5">
+                    <h3><strong>Passions & Loisirs</strong></h3>
+                    <ul>
+                        <li>Cinéma, jeux vidéo, street art</li>
+                        <li>Musique alternative, mode</li>
+                        <li>Sport, tatouage, cuisine créative</li>
                     </ul><br>
                 </li>
             </ul>
@@ -185,92 +298,141 @@
         </h1>
     </div>
     <div class="main_part">
-        <div class="experience color3">
-            <div class="d-flex flex-wrap">
-                <h4 class="col-12"><strong>Titulaire du permis B</strong></h4><br>
-                <h4 class="col-12">Compétences</h4>
-
-                <div class="col-6 col-md-3 ps-2">
-                    <p class="border-bottom">HTML/CSS </p>
-                    <p class="border-bottom">JavaScript</p>
-                    <p class="border-bottom">PHP</p>
-                    <p class="border-bottom">SQL</p>
-                    <p class="border-bottom">React</p>
-                    <p class="border-bottom">Symfony</p>
-                    <p class="border-bottom">WordPress</p>
+        <div class="experience color3 fade-in-section">
+            <h4 class="col-12 mb-4"><strong>Compétences Techniques</strong></h4>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h5><i class="fab fa-html5"></i> HTML5/CSS3</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <p class="border-bottom">
+                
+                <div class="skill-item">
+                    <h5><i class="fab fa-js-square"></i> JavaScript</h5>
+                    <div class="skill-stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <p class="border-bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
-                    <p class="border-bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
-                    <p class="border-bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <p class="border-bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
-                    <p class="border-bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
-                    <p class="border-bottom">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
+                        <i class="far fa-star"></i>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3 ps-2">
-                    <p class="border-bottom">Anglais </p>
-                    <p class="border-bottom">Espagnol</p>
+                
+                <div class="skill-item">
+                    <h5><i class="fab fa-php"></i> PHP 8.2+</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <p class="border-bottom">
+                
+                <div class="skill-item">
+                    <h5><i class="fas fa-database"></i> MySQL</h5>
+                    <div class="skill-stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                    </p>
-                    <p class="border-bottom">
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <h5><i class="fab fa-symfony"></i> Symfony 7.3</h5>
+                    <div class="skill-stars">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <h5><i class="fab fa-wordpress"></i> WordPress</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <h5><i class="fab fa-git-alt"></i> Git/GitHub</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <h5><i class="fab fa-css3-alt"></i> Tailwind CSS</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <h5><i class="fas fa-language"></i> Anglais</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <h5><i class="fas fa-language"></i> Espagnol</h5>
+                    <div class="skill-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
                 </div>
             </div>
+            
+            <h4 class="col-12 mb-4 mt-5"><strong>Outils & Technologies</strong></h4>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <ul>
+                        <li>Doctrine ORM</li>
+                        <li>Twig</li>
+                        <li>WooCommerce</li>
+                        <li>Webpack Encore</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul>
+                        <li>VichUploader</li>
+                        <li>Symfony Mailer</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                    </ul>
+                </div>
+            </div>
+            
             <a class="inner-link" href="#">Revenir en haut</a>
         </div>
     </div>
@@ -289,6 +451,6 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
