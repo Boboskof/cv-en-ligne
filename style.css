@@ -570,6 +570,27 @@ p {
     transform: scale(1.05);
 }
 
+/* Style pour le logo DreamDogs */
+.project-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background: white;
+    padding: 1rem;
+}
+
+.project-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Style spécifique pour le logo Bully Love avec fond marron */
+.project-card:nth-child(3) .project-logo {
+    background: #8B4513;
+    padding: 1.5rem;
+}
+
 /* Galerie d'images pour les projets */
 .project-gallery {
     margin: 1.5rem 0;

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bully Love - Projet JavaScript</title>
+    <style>
+        .project-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .project-header h1 {
+            font-family: "Kaushan Script", cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .screenshot-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 600px;
+        }
+        
+        .screenshot-caption {
+            padding: 1.5rem;
+            background: #f8f9fa;
+        }
+        
+        .screenshot-caption h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .screenshot-caption p {
+            color: #666;
+            margin: 0;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            background: rgba(0,0,0,1);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .tech-stack {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .tech-stack h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .project-header h1 {
+                font-size: 2rem;
+            }
+            
+            .screenshot-item img {
+                max-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Retour au CV
+    </a>
+    
+    <div class="project-header">
+        <h1>Bully Love</h1>
+        <p>Mini application front-end en JavaScript</p>
+    </div>
+    
+    <div class="container">
+        <div class="tech-stack">
+            <h3><i class="fas fa-code"></i> Technologies utilisées</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Logique de jeu</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <span>Manipulation DOM</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Événements</span>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="text-center mb-4">Captures d'écran du projet</h2>
+        
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="Screenshots/index_desktop.png" alt="Bully Love - Page d'accueil">
+                <div class="screenshot-caption">
+                    <h3><i class="fas fa-home"></i> Page d'accueil</h3>
+                    <p>Interface principale du jeu avec navigation et présentation</p>
+                </div>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="Screenshots/connexion_desktop.png" alt="Bully Love - Page de connexion">
+                <div class="screenshot-caption">
+                    <h3><i class="fas fa-sign-in-alt"></i> Page de connexion</h3>
+                    <p>Formulaire de connexion et authentification utilisateur</p>
+                </div>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="Screenshots/blog_desktop.png" alt="Bully Love - Section blog">
+                <div class="screenshot-caption">
+                    <h3><i class="fas fa-blog"></i> Section blog</h3>
+                    <p>Interface du blog avec articles et contenu</p>
+                </div>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="Screenshots/info_desktop.png" alt="Bully Love - Page d'informations">
+                <div class="screenshot-caption">
+                    <h3><i class="fas fa-info-circle"></i> Page d'informations</h3>
+                    <p>Section informative avec détails sur le projet</p>
+                </div>
+            </div>
+            
+            <div class="screenshot-item">
+                <img src="Screenshots/morpho_desktop.png" alt="Bully Love - Interface morpho">
+                <div class="screenshot-caption">
+                    <h3><i class="fas fa-user-edit"></i> Interface morpho</h3>
+                    <p>Section de personnalisation et création de personnage</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5 mb-5">
+            <a href="index.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-arrow-left"></i> Retour au CV
+            </a>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
