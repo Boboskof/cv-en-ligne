@@ -9,10 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Bully Love - Projet JavaScript</title>
+    <title>L'Atelier des Délices - Projet WordPress</title>
     <style>
         .project-header {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
             color: white;
             padding: 4rem 0;
             text-align: center;
@@ -72,27 +72,39 @@
             margin: 0;
         }
         
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: rgba(0,0,0,0.8);
+        .pdf-download {
+            background: linear-gradient(135deg, #e17055, #d63031);
             color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            z-index: 1000;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
         }
         
-        .back-button:hover {
-            background: rgba(0,0,0,1);
+        .pdf-download h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .pdf-download a {
             color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        
+        .pdf-download a:hover {
+            background: white;
+            color: #d63031;
             transform: scale(1.05);
         }
         
         .tech-stack {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(135deg, #e17055, #d63031);
             color: white;
             padding: 2rem;
             border-radius: 15px;
@@ -120,13 +132,13 @@
         }
         
         @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+            
             .screenshot-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
-            }
-            
-            .project-header h1 {
-                font-size: 2rem;
             }
             
             .screenshot-item img {
@@ -136,15 +148,9 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i> Retour au CV
-    </a>
-    
     <div class="project-header">
-        <div class="header-logo">
-            <img src="Screenshots/211124logoBlancBullyLove.png" alt="Bully Love Logo" style="max-height: 150px; margin-bottom: 1rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
-        </div>
-        <p>Mini application front-end en JavaScript</p>
+        <h1>L'Atelier des Délices</h1>
+        <p>Site WordPress e-commerce</p>
     </div>
     
     <div class="container">
@@ -152,74 +158,82 @@
             <h3><i class="fas fa-code"></i> Technologies utilisées</h3>
             <div class="tech-list">
                 <div class="tech-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
+                    <i class="fab fa-wordpress"></i>
+                    <span>WordPress</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>WooCommerce</span>
                 </div>
                 <div class="tech-item">
                     <i class="fab fa-css3-alt"></i>
                     <span>CSS3</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Plugins</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-gamepad"></i>
-                    <span>Logique de jeu</span>
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive Design</span>
                 </div>
                 <div class="tech-item">
-                    <i class="fas fa-mouse-pointer"></i>
-                    <span>Manipulation DOM</span>
-                </div>
-                <div class="tech-item">
-                    <i class="fas fa-bolt"></i>
-                    <span>Événements</span>
+                    <i class="fas fa-palette"></i>
+                    <span>Charte graphique</span>
                 </div>
             </div>
         </div>
         
-        <h2 class="text-center mb-4">Captures d'écran du projet</h2>
+        <h2 class="text-center mb-4">Pages du projet</h2>
         
         <div class="screenshot-grid">
             <div class="screenshot-item">
-                <img src="Screenshots/index_desktop.png" alt="Bully Love - Page d'accueil">
+                <img src="images/11_02_38.png" alt="L'Atelier des Délices - Page d'accueil">
                 <div class="screenshot-caption">
                     <h3><i class="fas fa-home"></i> Page d'accueil</h3>
-                    <p>Interface principale du jeu avec navigation et présentation</p>
+                    <p>Interface principale du site e-commerce avec navigation</p>
                 </div>
             </div>
             
             <div class="screenshot-item">
-                <img src="Screenshots/connexion_desktop.png" alt="Bully Love - Page de connexion">
+                <img src="images/09_59_15.png" alt="L'Atelier des Délices - Catalogue produits">
                 <div class="screenshot-caption">
-                    <h3><i class="fas fa-sign-in-alt"></i> Page de connexion</h3>
-                    <p>Formulaire de connexion et authentification utilisateur</p>
+                    <h3><i class="fas fa-shopping-bag"></i> Catalogue produits</h3>
+                    <p>Galerie des produits avec filtres et recherche</p>
                 </div>
             </div>
             
             <div class="screenshot-item">
-                <img src="Screenshots/blog_desktop.png" alt="Bully Love - Section blog">
+                <img src="images/09_52_31.png" alt="L'Atelier des Délices - Page produit">
                 <div class="screenshot-caption">
-                    <h3><i class="fas fa-blog"></i> Section blog</h3>
-                    <p>Interface du blog avec articles et contenu</p>
+                    <h3><i class="fas fa-tag"></i> Page produit</h3>
+                    <p>Détail d'un produit avec options d'achat</p>
                 </div>
             </div>
             
             <div class="screenshot-item">
-                <img src="Screenshots/info_desktop.png" alt="Bully Love - Page d'informations">
+                <img src="images/09_52_10.png" alt="L'Atelier des Délices - Panier">
                 <div class="screenshot-caption">
-                    <h3><i class="fas fa-info-circle"></i> Page d'informations</h3>
-                    <p>Section informative avec détails sur le projet</p>
+                    <h3><i class="fas fa-shopping-cart"></i> Panier d'achat</h3>
+                    <p>Interface du panier avec gestion des quantités</p>
                 </div>
             </div>
             
             <div class="screenshot-item">
-                <img src="Screenshots/morpho_desktop.png" alt="Bully Love - Interface morpho">
+                <img src="images/09_51_50.png" alt="L'Atelier des Délices - Checkout">
                 <div class="screenshot-caption">
-                    <h3><i class="fas fa-user-edit"></i> Interface morpho</h3>
-                    <p>Section de personnalisation et création de personnage</p>
+                    <h3><i class="fas fa-credit-card"></i> Processus de commande</h3>
+                    <p>Formulaire de commande et paiement sécurisé</p>
                 </div>
             </div>
+        </div>
+        
+        <div class="pdf-download">
+            <h3><i class="fas fa-file-pdf"></i> Documentation complète</h3>
+            <p>Téléchargez la documentation complète du projet</p>
+            <a href="atelier_delices.pdf" target="_blank">
+                <i class="fas fa-download"></i> Télécharger le PDF complet
+            </a>
         </div>
         
         <div class="text-center mt-5 mb-5">
@@ -231,4 +245,4 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>

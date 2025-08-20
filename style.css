@@ -802,4 +802,176 @@ p {
 }
 @keyframes draw { to { stroke-dashoffset:0; } }
 
+/* === RESPONSIVE DESIGN ================================================= */
+@media (max-width: 768px) {
+  /* Header et navigation */
+  .caption .titre {
+    font-size: 1.4em;
+    letter-spacing: 3px;
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .titre-typing {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  
+  #main-title .titre-typing {
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Gros ronds - adaptation mobile */
+  .circle-link {
+    --size: 65px;
+    font-size: 0.7em;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Positionnement des ronds sur mobile */
+  .circle-link:nth-child(1) { top: 15%; left: 8%; }
+  .circle-link:nth-child(2) { top: 15%; right: 8%; }
+  .circle-link:nth-child(3) { top: 45%; left: 3%; }
+  .circle-link:nth-child(4) { top: 45%; right: 3%; }
+  .circle-link:nth-child(5) { bottom: 15%; left: 12%; }
+  .circle-link:nth-child(6) { bottom: 15%; right: 12%; }
+  
+  /* Sections de contenu */
+  .experience {
+    padding: 2em 1.5em;
+    margin: 1em 0;
+    font-size: 1.1rem;
+  }
+  
+  .experience h1 {
+    font-size: 1.6em;
+    letter-spacing: 3px;
+  }
+  
+  .experience h2 {
+    font-size: 1.3em;
+    letter-spacing: 2px;
+  }
+  
+  /* Grille des projets */
+  .project-card {
+    margin-bottom: 2rem;
+  }
+  
+  .project-image {
+    height: 150px;
+  }
+  
+  .project-logo {
+    max-height: 120px !important;
+    padding: 1rem !important;
+  }
+  
+  /* Grille des compétences */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .skill-item h5 {
+    font-size: 0.9rem;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer .col-12 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header encore plus compact */
+  .caption .titre {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    padding: 0.8rem;
+  }
+  
+  .titre-typing {
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Ronds encore plus petits */
+  .circle-link {
+    --size: 55px;
+    font-size: 0.6em;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Sections de contenu */
+  .experience {
+    padding: 1.5em 1em;
+    font-size: 1rem;
+  }
+  
+  .experience h1 {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+  }
+  
+  .experience h2 {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+  
+  /* Grille des compétences */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .skill-item h5 {
+    font-size: 0.8rem;
+  }
+  
+  /* Projets */
+  .project-image {
+    height: 120px;
+  }
+  
+  .project-logo {
+    max-height: 100px !important;
+    padding: 0.8rem !important;
+  }
+  
+  /* Boutons */
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Espacement général */
+  .main_part {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Orientation paysage sur mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .caption .titre {
+    font-size: 1.1em;
+    padding: 0.8rem;
+  }
+  
+  .circle-link {
+    --size: 60px;
+    font-size: 0.6em;
+  }
+  
+  .experience {
+    padding: 1.5em 1em;
+  }
+}
+
 
