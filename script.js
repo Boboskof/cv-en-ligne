@@ -1,14 +1,17 @@
-
-  // Animation de chargement
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      const loading = document.getElementById('loading');
+// Animation de chargement - simplifiée
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    const loading = document.getElementById('loading');
+    if (loading) {
       loading.classList.add('fade-out');
       setTimeout(function() {
         loading.style.display = 'none';
       }, 500);
-    }, 1000);
-  });
+    }
+  }, 1500);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
 
   // Apparition au scroll améliorée
   const faders = document.querySelectorAll('.fade-in-section');
@@ -30,17 +33,10 @@
   });
 
   // Animation du titre principal
-  document.addEventListener("DOMContentLoaded", function () {
-    const titre = document.querySelector(".caption .titre");
-    if (titre) {
-      titre.classList.add("visible");
-    }
-  });
-
-
-
-
-  document.addEventListener('DOMContentLoaded', () => {
+  const titre = document.querySelector(".caption .titre");
+  if (titre) {
+    titre.classList.add("visible");
+  }
 
   /* ───────── Références DOM ───────── */
   const bigCircles  = [...document.querySelectorAll('#menu-ronds .circle-link')];
@@ -72,12 +68,12 @@
   const miniCircles = cfg.map(() => {
     const d = document.createElement('div');
     d.className = 'mini-circle';
-    miniWrap.appendChild(d);
+    if (miniWrap) miniWrap.appendChild(d);
     return d;
   });
 
   /* ───────── Helpers ───────── */
-  const clearSVG = () => (svg.innerHTML = '');
+  const clearSVG = () => { if (svg) svg.innerHTML = ''; };
 
   /* Facteur de rayon : on compacte le rayon à 80 % sous 1010 px,
      mais **on ne change pas le diamètre des ronds**               */
@@ -98,7 +94,7 @@
     p.setAttribute('d', path);
     p.classList.add('circuit');
     p.style.animationDelay = `${idx * 0.2}s`;
-    svg.appendChild(p);
+    if (svg) svg.appendChild(p);
   }
 
   /* ───────── Positionnement global ───────── */
@@ -106,7 +102,7 @@
     clearSVG();
 
     const R0 = baseRadius();
-    const tRect = title.getBoundingClientRect();
+    const tRect = title ? title.getBoundingClientRect() : {left:0,top:0,width:0,height:0};
     const cx = tRect.left + tRect.width  / 2;
     const cy = tRect.top  + tRect.height / 2;
 
@@ -137,7 +133,14 @@
   /* ───────── Init + Resize ───────── */
   refresh();
   window.addEventListener('resize', refresh);
+
+  // Scroll fluide pour tous les liens "Revenir en haut"
+  document.querySelectorAll('a.inner-link[href="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Essayez de scroller le body ET le html
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   });
-
-  
-
+});
